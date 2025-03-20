@@ -1,0 +1,17 @@
+{
+    "mcpServers": {
+        "eagleFeed": {
+            "cmand": "uv",
+            "args": ["run", "eagleFeed/eagleFeed.py",  "--port", "8001"]
+        },
+        "calendar": {
+            "command": "uv",
+            "args": ["run", "googleCalendar/calendarServer.py",  "--port", "8000"]
+        },
+
+        "puppeteer": {
+            "command": "npx",
+            "args": ["-y", "@modelcontextprotocol/server-puppeteer", "--port", "8005"]
+        }
+    }
+}
