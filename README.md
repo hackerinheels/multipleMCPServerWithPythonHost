@@ -6,7 +6,7 @@ This repository contains a Server-Sent Events (SSE) Model Control Protocol (MCP)
 1. Clone this repository:
    ```bash
    git clone https://github.com/hackerinheels/multipleMCPServerWithPythonHost.git
-   cd to the folder
+   cd multipleMCPServerWithPythonHost
    ```
 
 2. Create a `.env` file in the root directory with your API keys:
