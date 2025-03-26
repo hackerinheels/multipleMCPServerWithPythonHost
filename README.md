@@ -12,7 +12,7 @@ This repository contains a Server-Sent Events (SSE) Model Control Protocol (MCP)
 2. Create a `.env` file in the root directory with your API keys:
    ```
    GEMINI_API_KEY=your_api_key_here
-   MODEL_NAME=gemini-pro
+   MODEL_NAME=gemini-2.0-flash
    ```
 
    You can get a Gemini API key from [Google's AI Studio](https://makersuite.google.com/app/apikey).
