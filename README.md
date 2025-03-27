@@ -24,6 +24,27 @@ This repository contains a Server-Sent Events (SSE) Model Control Protocol (MCP)
    - Create OAuth 2.0 credentials
    - Download the credentials and save as `credentials.json` in the current directory
 
+4. Update config.json to include the browser-use server:
+   ```json
+   {
+       "mcpServers": {
+           "calendar": {
+               "command": "uv",
+               "args": ["run", "googleCalendar/calendarServer.py", "--port", "8000"]
+           },
+           "browser-use": {
+               "command": "uv",
+               "args": ["run", "<path-to-browser-use-mcp-server>/server", "--port", "8006"]
+           }
+       }
+   }
+   ```
+   Replace `<path-to-browser-use-mcp-server>` with the actual path where you cloned the repository.
+5. Create a `.env` file in the browser-use-mcp-server directory with the following configuration:
+```env
+CHROME_PATH="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+```
+
 ## Running the Application
 ```bash
 uv venv --python 3.11
@@ -31,7 +52,7 @@ source .venv/bin/activate
 uv pip install -r requirements.txt
 uv run host.py
 ```
-## This will start all the servers listed in the config.json file
+This will start all the servers listed in the config.json file
 
 ## Usage
 
@@ -50,6 +71,9 @@ Example queries:
 - "Get details for event {event_id}"
 
 ### Browser Use For Browser Automation
+This tool enable browser automation and control with the following tools:
+- 'browser_use'
+- 'browser_get_result'
 
 Type `quit` to exit the client.
 
@@ -79,46 +103,7 @@ This repository demonstrates how to load and run multiple MCP servers using a co
 - Control Chrome browser programmatically
 - Execute browser-based tasks
 
-## Setup Instructions
 
-### 1. Environment Setup
-```bash
-# Create and activate virtual environment
-python -m venv .venv
-source .venv/bin/activate  # On Windows: .venv\Scripts\activate
-
-# Install dependencies
-pip install -r requirements.txt
-```
-
-### 2. Configuration
-Create a `.env` file with your API keys:
-```env
-GEMINI_API_KEY="your-gemini-api-key"
-MODEL_NAME="gemini-1.5-flash"
-```
-
-### 3. Browser-use MCP Server Setup
-1. Download the server:
-   ```bash
-   git clone https://github.com/co-browser/browser-use-mcp-server
-   ```
-2. Update config.json to include the browser-use server:
-   ```json
-   {
-       "mcpServers": {
-           "calendar": {
-               "command": "uv",
-               "args": ["run", "googleCalendar/calendarServer.py", "--port", "8000"]
-           },
-           "browser-use": {
-               "command": "uv",
-               "args": ["run", "<path-to-browser-use-mcp-server>/server", "--port", "8006"]
-           }
-       }
-   }
-   ```
-   Replace `<path-to-browser-use-mcp-server>` with the actual path where you cloned the repository.
 
 ### 4. Browser-use Server Environment Setup
 Create a `.env` file in the browser-use-mcp-server directory with the following configuration:
