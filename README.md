@@ -1,5 +1,12 @@
 # Multiple MCP SSE Servers with a Python Host
 This repository contains a Server-Sent Events (SSE) Model Control Protocol (MCP) client implementation that uses Google's Gemini API.
+The Host app reads the config.json file, instantiates instances of MCP Client class to launch the MCP servers and maintain connections with them, clean up on shutdown etc.
+
+It's possible to package this host app as a dmg package and distribute which can then be used with any MCP SSE ervers. 
+Todo: Add stdio server support
+Todo: Add multiple model support
+Todo: Add tool chaining
+
 
 ## Setup
 
