@@ -6,7 +6,7 @@
         },
         "browser-use": {
             "command": "uv",
-            "args": ["run", "/<parent folder>/browser-use-mcp-server/server", "--port", "8006"]
+            "args": ["run", "browser-use-mcp-server/server", "--port", "8006"]
         }
     }
 }
