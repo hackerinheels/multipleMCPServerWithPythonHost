@@ -29,7 +29,7 @@ Todo: Add tool chaining
    - Create a new project or select an existing one
    - Enable the Google Calendar API
    - Create OAuth 2.0 credentials
-   - Download the credentials and save as `credentials.json` in the current directory
+   - Download the credentials and save as `credentials.json` in the current directory. 
 
 4. Update config.json to include the browser-use server:
    ```json
