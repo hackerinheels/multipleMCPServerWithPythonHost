@@ -1,16 +1,12 @@
 {
     "mcpServers": {
-        "eagleFeed": {
-            "command": "uv",
-            "args": ["run", "eagleFeed/eagleFeed.py",  "--port", "8001"]
-        },
         "calendar": {
             "command": "uv",
             "args": ["run", "googleCalendar/calendarServer.py",  "--port", "8000"]
         },
         "browser-use": {
             "command": "uv",
-            "args": ["run", "/Users/abhisheksinghal/code/browser-use-mcp-server/server", "--port", "8006"]
+            "args": ["run", "/<parent folder>/browser-use-mcp-server/server", "--port", "8006"]
         }
     }
 }
