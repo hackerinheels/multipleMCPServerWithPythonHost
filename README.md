@@ -24,12 +24,7 @@ Todo: Add tool chaining
 
    You can get a Gemini API key from [Google's AI Studio](https://makersuite.google.com/app/apikey).
 
-3. Set up Google Calendar API:
-   - Go to the [Google Cloud Console](https://console.cloud.google.com/)
-   - Create a new project or select an existing one
-   - Enable the Google Calendar API
-   - Create OAuth 2.0 credentials
-   - Download the credentials and save as `credentials.json` in the current directory. 
+3. Set up Google Calendar API using the instructions in the googleCalendar/README.md file
 
 4. Update config.json to include the browser-use server:
    ```json
